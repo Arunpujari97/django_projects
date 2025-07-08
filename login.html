@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibility for older IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    
+    <title>Log-i n page</title>
+
+    <!-- Optional: Fallback for older browsers -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static 'register_app/style.css' %}">
+</head>
+<body>
+  <h2>login</h2>
+  {% if error %}
+      <p style="color: red;">{{ error }}</p>
+  {% endif %}
+  <form method="POST">
+    {% csrf_token %}
+    <label>Email_id</label>
+    <input type="text" name="email" placeholder="enter your email_id" required><br>
+    <label>password</label>
+    <input type="password" name="password" placeholder="enter your password" required><br>
+    <button type="submit">log_in</button>
+    <button type="reset">clear</button>
+</body>
+</html>

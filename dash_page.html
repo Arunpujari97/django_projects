@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibility for older IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    
+    <title>Register Page</title>
+
+    <!-- Optional: Fallback for older browsers -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static 'register_app/style.css' %}">
+</head>
+<body>
+    <h1>hello arun wellcome dash</h1>
+    <footer>
+      <a href="{%url 'login' %}">
+        <button>logout</button>
+      </a>
+    </footer>
+</body>
+</html>
